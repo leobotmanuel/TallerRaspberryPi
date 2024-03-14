@@ -9,7 +9,7 @@ Repositorio de recursos para la configuracion y programacion de Raspberry Pi.
 Repositorio en construccion
 </center>
 
-Raspberry Pi es un ordenador funcional pequeño y de bajo coste. Permite navegar por Internet, jugar con videojuegos, programar tus propios programas o dsipositivos físicos,...
+Raspberry Pi es un ordenador funcional pequeño y de bajo coste. Permite navegar por Internet, jugar con videojuegos, programar tus propios programas o dispositivos físicos,...
 
 <center>
 ![Raspberry_Pi_4B](img/introduccion/Raspberry_Pi_4B.jpg)
