@@ -1,4 +1,4 @@
-# **Introducción**
+# **0. Introducción**
 
 
 Repositorio de recursos para la configuracion y programacion de Raspberry Pi.
