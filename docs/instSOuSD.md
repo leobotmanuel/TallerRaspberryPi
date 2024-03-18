@@ -14,7 +14,7 @@ Fuentes de los contenidos:
 
 [https://aprendiendoarduino.wordpress.com](https://aprendiendoarduino.wordpress.com/2022/04/17/paso-a-paso-instalar-y-configurar-raspberry-pi-os)
 
-##**1.1. Elección de la tarjeta micro SD**##
+###**1.1. Elección de la tarjeta micro SD**###
 Para grabar el sistema operativo de la placa RPi la tarjeta micro SD tiene que tener una velocidad mínima de 10 Mb/seg y una capacidad de 8GB o más (los S.O. actuales neccesitan 16GB o más). Estas caracteristicas se obtiene de la serigrafía de la tarjeta como se ve en la siguiente imagen:
 <center>
 ![02_sd](img/instSOuSD/02_sd.png)
@@ -27,7 +27,7 @@ Características tarjeta micro SD
 
 El sistema operativo para la placa Raspberry Pi se puede obtener en una tarjeta microSD con la aplicación NOOBS instalada (NOOBS facilita la instalación de diversas distribuciones Linux), instalando manualmente una imagen del S.O. que se descarga de la web oficial o utilizando la apliación más reciente **Raspberry Pi Imager**, fácil y cómoda de utilizar.
 
-##**1.2. Grabación de Raspberry Pi OS con Raspberry Pi Imager**##
+###**1.2. Grabación de Raspberry Pi OS con Raspberry Pi Imager**###
 
 Para grabar **Raspberry Pi OS** en la tarjeta microSD (recomiendo una de 32GB) se descarga la apliacación [**Raspberry Pi Imager** (descargar)](https://www.raspberrypi.com/software/) para el sistema operativo de tu portátil.
 <center>
@@ -85,3 +85,12 @@ y se espera a que termine...
 
 YA SE TIENE LO NECESARIO PARA IR AL TALLER!!!
 
+###**1.3. Detectar la IP de RPi**###
+
+###**1.4. Conectar con PuTTY (SSH)**###
+
+###**1.5. Actualizar RPi**###
+
+###**1.6. Activar VNC**###
+
+###**1.7. Conectar VCN Viewer a RPi**###
