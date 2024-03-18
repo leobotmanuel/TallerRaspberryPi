@@ -31,14 +31,14 @@ extra:
 # 5. Navegación
 nav:
   # Modelo para empezar: Intro, Info del autor y la instalación
-  - 0. INTRODUCCIÓN: index.md
-  - 1. INSTALCIÓN SO EN uSD: instSOuSD.md
-  - 1.1. Grabar SO con Imager: instalacion/grabarImager.md
-  - 1.2. Detectar la IP de RPi: instalacion/detectarIP.md
-  - 1.3. Conectar con PuTTY (SSH): instalacion/conexionSSH.md
-  - 1.4. Actualizar RPi: instalacion/actualizarRPi.md
-  - 1.5. Activar VNC: instalacion/activarVNC.md
-  - 1.6. Conectar VCN Viewer a RPi: instalacion/conectarVNC.md
+  - 0. Introducción: index.md
+  - 1. Instalación S.O. en miroSD: instSOuSD.md
+  #- 1.1. Grabar SO con Imager: instalacion/grabarImager.md
+  #- 1.2. Detectar la IP de RPi: instalacion/detectarIP.md
+  #- 1.3. Conectar con PuTTY (SSH): instalacion/conexionSSH.md
+  #- 1.4. Actualizar RPi: instalacion/actualizarRPi.md
+  #- 1.5. Activar VNC: instalacion/activarVNC.md
+  #- 1.6. Conectar VCN Viewer a RPi: instalacion/conectarVNC.md
   #- Hardware: hardware.md 
   - Autores: about.md
   
