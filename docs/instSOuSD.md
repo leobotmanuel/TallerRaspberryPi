@@ -85,12 +85,118 @@ y se espera a que termine...
 
 YA SE TIENE LO NECESARIO PARA IR AL TALLER!!!
 
+Teniendo grabado en la tarjeta microSD el sistema operativo **Raspberry Pi OS (Legacy, 64-bit) Full** se inserta en el slot (ranura en la parte posterior) de la placa Raspberry Pi 4B...
+
+<center>
+![15_insercion_pi-sd](img/instSOuSD/15_insercion_pi-sd.png)
+
+Inserción de la tarjeta microSD a la placa Raspberry Pi
+</center>
+
+Para encender la placa, primero se conecta el conector USB tipo C del adaptador de tensión a la placa y después se enchufa a una toma de corriente. **En caso de conectar primero al enchufe y luego, el conector USB tipo C, a la Raspberry podríamos causar pequeños cortos que podrían afectar la vida útil de nuestra tarjeta**
+
+<center>
+![16_pi-power](img/instSOuSD/16_pi-power.png)
+
+Conexión de la alimentación a la placa Raspberry Pi
+</center>
+
 ###**1.3. Detectar la IP de RPi**###
+Con el móvil configurado para **compartir conexión wifi** y la placa Raspberry Pi encendida con los ajustes realizados al sistema operativo, en el apartado anterior, se puede ver la IP de de la placa Raspberry PI.
 
-###**1.4. Conectar con PuTTY (SSH)**###
+Accediendo a ajustes del móvil de **Conexión Compartida** se obtiene la IP.
 
-###**1.5. Actualizar RPi**###
+|            |            |            |
+| ---------- | ---------- | ---------- |
+|![17_ipConexion](img/instSOuSD/17_ipConexion.png)|![18_ipConexion](img/instSOuSD/18_ipConexion.png)|![19_ipConexion](img/instSOuSD/19_ipConexion.png)|
+|**Sin conexión**|**Con conexión**|**IP de RPi**|
 
-###**1.6. Activar VNC**###
+###**1.4. Conectar con PuTTY (SSH) y actualizar la RPi**###
 
-###**1.7. Conectar VCN Viewer a RPi**###
+Conociendo la **IP de la placa Raspberry Pi** se puede conectar en remoto por el protocolo SSH a la placa. Utilizando la conexión SSH se accede a la consola de comandos en línea que no va a permitir actualizar y cambiar la confiuración de la Raspberry Pi para acceder en modo gráfico.
+
+Se necesita tener instalado en el portátil la aplicación **PuTTY**, emulador de terminal,que hay tanto para Linux como para Windows. [Descargar](https://www.putty.org/).
+
+En Ubuntu es fácil instalarlo desde el **Gestor de software**
+<center>
+![20_instalarPuTTYUbuntu](img/instSOuSD/20_instalarPuTTYUbuntu.png)
+
+Instalación del emulador de terminal PuTTY
+</center>
+
+Si se hace desde el terminal de Linux ([aquí un tutorial](https://www.solvetic.com/tutoriales/article/13001-como-instalar-putty-en-linux/)).
+
+En Windows se descarga desde la [web https://putty.org](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), descargando el archivo instalador .msi
+
+Una vez instalado y ejecutado el emulador de terminal PuTTY aparece la pantalla y se pone la IP de la placa Raspberry Pi, en el cuadro de texto marcado en negro...
+<center>
+![21_pantallPuTTY](img/instSOuSD/21_pantallaPuTTY.png)
+
+Configurar la conexión en PuTTY
+</center>
+
+Pulsando la opción **Open** aparece la ventana que primero pide el nombre de **usuario** y a continuación la **contraseña**. En los ajustes de la grabación se ha cambiado el usuario y contraseña. En el caso que no se haya cambiado el usuario sería **pi** y la contraseña **raspberry**.
+
+<center>
+![22_accesoConsola01](img/instSOuSD/22_accesoConsola01.png)
+![23_accesoConsola02](img/instSOuSD/23_accesoConsola02.png)
+![24_accesoConsola03](img/instSOuSD/24_accesoConsola03.png)
+![25_accesoConsola04](img/instSOuSD/25_accesoConsola04.png)
+</center>
+
+Observando la última imagen, se puede interactuar con la placa a través de la línea de comandos.
+
+Los comandos para actualizar el sistema operativo de la Rapsberry Pi son los siguientes:
+
+- **sudo apt update**-
+
+- **sudo apt upgrade**
+
+En el proceso de actualización se va dando confirmación (si se pide) a la descarga de los archivos...
+<center>
+![26_actualizacion](img/instSOuSD/26_actualizacion.png)
+
+Proceso de actualización terminado
+</center>
+###**1.5. Activar VNC**###
+Actualizado el sistema operativo, se ajusta la configuración para poder hacer la conexión remota al escritorio en modo gráfico.
+
+A través de PuTTY se escribe el siguiente comando:
+
+- **sudo raspi-config**
+
+Aparecen la ventana de ajuste de configuración y con las teclas de **flechas** se desplaza a la opción a seleccionar, con la tecla **Tab** se seleciona, se vuelve atrás o se confirma.
+
+|            |            |
+| ---------- | ---------- |
+|![27_configVNC01](img/instSOuSD/27_configVNC01.png)|![28_configVNC01](img/instSOuSD/28_configVNC02.png)|
+|![29_configVNC03](img/instSOuSD/29_configVNC03.png)|![30_configVNC04](img/instSOuSD/30_configVNC04.png)|
+
+Realizado los ajustes de configuración se tiene que **reiniciar** para asegurar los cambios.
+
+###**1.6. Conectar VCN Viewer a RPi**###
+
+Para conectar desde el portátil y conectarse por VNC a la RPI se tiene que instalar en el portátil la aplicación **VNC Viewer**.
+
+Descargar en https://www.realvnc.com/es/connect/download/viewer/ e instalar.
+
+Al arrancar la apliación **VNC Viewer** aparece la pantalla.
+<center>
+![31_vncArranque](img/instSOuSD/31_vncArranque.png)
+
+Pantalla de inicio de VNC Viewer
+</center>
+
+Se configura la conexión accediendo al menú de **Archivo** --> **Nueva conexión** o se escribe la IP en la parte superior. Se va poniendo el nombre de usuario y contraseña...
+
+|            |            |
+| ---------- | ---------- |
+|![33_vncAutentificacion01](img/instSOuSD/33_vncAutentificacion01.png)|![32_vncNuevaConexion](img/instSOuSD/32_vncNuevaConexion.png)|
+|![34_vncAutentificacion02](img/instSOuSD/34_vncAutentificacion02.png)|![35_vncAutentificacion03](img/instSOuSD/35_vncAutentificacion03.png)|
+
+Se finaliza llegando al escritorio remoto gráfico.
+<center>
+![36_vncEscritorioReoto](img/instSOuSD/36_vncEscritorioRemoto.png)
+
+Escritorio gráfico de RPI
+</center>
