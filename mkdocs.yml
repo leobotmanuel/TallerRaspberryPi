@@ -33,6 +33,7 @@ nav:
   # Modelo para empezar: Intro, Info del autor y la instalación
   - 0. Introducción: index.md
   - 1. Instalación S.O. en miroSD: instSOuSD.md
+  - 2. Software: software.md
   
   - Autores: about.md
   
